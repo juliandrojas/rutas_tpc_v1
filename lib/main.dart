@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rutas_tpc_v1/components/grid_gallery_buttons.dart';
+import 'package:rutas_tpc_v1/components/grid_routes_buttons.dart';
+import 'package:rutas_tpc_v1/components/maps.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,15 +16,15 @@ class MyApp extends StatelessWidget {
       title: 'Sistema de Rutas Sencillo',
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomeScreen(),
-        '/second': (context) => const SecondScreen(),
-        '/third': (context) => const ThirdScreen(),
+        '/': (context) => const ButtonGallery(),
+        '/routes': (context) => const ButtonRoutes(),
+        '/maps': (context) => const Maps(),
       },
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+/*class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,7 @@ class HomeScreen extends StatelessWidget {
         );
   }
 }
-
+*/
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
 

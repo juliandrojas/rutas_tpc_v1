@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ButtonGallery extends StatelessWidget {
-  const ButtonGallery({Key? key}) : super(key: key);
+class ButtonRoutes extends StatelessWidget {
+  const ButtonRoutes({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Galería de empresas"),
+        title: const Text("Galería de rutas"),
       ),
       body: GridView.count(
         crossAxisCount: 2, // Dos columnas
@@ -15,7 +15,7 @@ class ButtonGallery extends StatelessWidget {
         children: <Widget>[
           ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/routes');
+              Navigator.pushNamed(context, '/maps');
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
@@ -29,6 +29,14 @@ class ButtonGallery extends StatelessWidget {
                     height: 200,
                   ),
                 ),
+                const Text(
+                  "Nombre de la empresa",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                )
               ],
             ),
           ),
